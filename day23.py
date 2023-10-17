@@ -2,7 +2,8 @@ board = [[False,False,False,False],[True,True,False,True],[False,False,False,Fal
 start = [3,0]
 end = [0,0]
 while start != end:
-    if start[0] > end[0] :
+    if start[0] > end[0] and board[start[0]-1][start[1]:
         start[0] -= 1
-    elif start[0] < end[0]:
+    elif start[0] < end[0] and board[start[0]+1][start[1]:
         start[0] += 1
+    elif s
