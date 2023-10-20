@@ -1,20 +1,6 @@
-board = [[False,False,False,False,False,False,False,False,False,False,False,False],
+board = [[False,True,True,True,True,True,True,True,True,True,True,True],
          [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
-         [False,False,False,False,False,False,False,False,False,False,False,False],
+         [True,True,True,True,True,True,True,True,True,True,True,False],
          [False,False,False,False,False,False,False,False,False,False,False,False]]
 # first number is row number
 start = [3,0]
