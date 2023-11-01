@@ -29,16 +29,17 @@ board = [
 ]
 poss = []
 def findPossibilities(b, num):
-    poss.append(b)
+    print(b)
     if isThreatening(b):
         return num
     elif not b in poss:
+        poss.append(b)
         num += 1
     for i in range(len(b)):
         for j in range(len(b)):
             if b[i][j] != 1:
                 b[i][j] = 1
-                num += findPossibilities(b, num)
+                num = findPossibilities(b, num)
     return num
 print(findPossibilities(board, 0))
         
