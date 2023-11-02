@@ -1,0 +1,6 @@
+***NOT QUITE SOLVED***
+
+Problems that I have not quite solved but am just too lazy to completely finish them
+
+Day 35 - general idea of the algorithm is done, just need to make sure it works in all cases
+Day 28 - too lazy to debug every possible case
