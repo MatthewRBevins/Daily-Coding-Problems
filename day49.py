@@ -1,13 +1,27 @@
 array = [34, -50, 42, 14, -5, 86]
+def findMaxSub(array):
+    s = [[]]
+    index = 0
+    posneg = 1
+    for i in range(len(array)):
+        if posneg * array[i] > 0:
+            s[index].append(array[i])
+        else:
+            s[index] = sum(s[index])
+            s.append([array[i]])
+            index += 1
+            posneg *= -1
+    s[index] = sum(s[index])
 
-s = 0
-prevs = [[]]
-prevVals = [-1]
-for i in range(len(array)):
-    if array[i] < 0:
-        prevs[len(prevs)-1].append(i)
-        prevVals.append(s)
-        prevs.append([i+1])
-        s = 0
-    s += array[i]
-print(array[prevs[prevVals.index(max(prevVals))][0]:prevs[prevVals.index(max(prevVals))][1]])
+    poss = [[]]
+    index = 0
+    for i in range(1,len(s)):
+        if s[i] + s[i-1] > 0:
+            poss[index].append(s[i])
+        else:
+            poss[index] = sum(poss[index])
+            poss.append([])
+            index += 1
+    poss[index] = sum(poss[index])
+    return max(0,max(poss))
+print(findMaxSub(array))
