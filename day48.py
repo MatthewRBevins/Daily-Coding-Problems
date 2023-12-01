@@ -7,8 +7,6 @@ class Node:
         self.left = left
         self.right = right
 
-bt = Node(preorder[0])
-
 
 def construct(head, inorder):
     left = inorder[0:inorder.index(head)]

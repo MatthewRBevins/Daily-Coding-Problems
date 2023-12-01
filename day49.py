@@ -12,7 +12,6 @@ def findMaxSub(array):
             index += 1
             posneg *= -1
     s[index] = sum(s[index])
-
     poss = [[]]
     index = 0
     for i in range(1,len(s)):
