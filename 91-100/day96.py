@@ -1,13 +1,6 @@
 l = [1,2,3]
-def genPos(l, arr):
-    p = []
-    arrs = []
-    for i in l:
-        arr.append(i)
-        if len(arr) == len(l):
-            arrs.append(arr)
-            arr = []
-        else:
-            arrs.append(genPos(l, arr))
-    return arrs
-print(genPos(l, []))
+for i in l:
+    for j in l:
+        for k in l:
+            if i != j and j != k and i != k:
+                print([i,j,k])
