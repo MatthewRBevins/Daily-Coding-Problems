@@ -11,7 +11,7 @@ def makeMove(tower, start, end):
     print(len(tower[start])-1)
     temp = tower[start][len(tower[start])-1]
     del tower[start][len(tower[start])-1]
-    tower[end].append(len(tower[start])-1)
+    tower[end].append(temp)
     return tower
 
 def completeTower(tower, path):
@@ -24,11 +24,15 @@ def completeTower(tower, path):
                 if not [i, j] in path:
                     options.append([i,j])
     for i in options:
-        t = makeMove(tower, i[0], i[1])
-        p = path.copy()
-        p.append(i)
-        if completeTower(tower, p) == True:
-            return True
+        if len(tower[i[0]]) > 0:
+            print("&&&")
+            print(i[0])
+            print(i[1])
+            t = makeMove(tower, i[0], i[1])
+            p = path.copy()
+            p.append(i)
+            if completeTower(tower, p) == True:
+                return True
     return False
 
 print(completeTower(OGTower, []))
