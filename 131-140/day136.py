@@ -16,14 +16,19 @@ def checkRectangleSize(matrix, r, c):
             for j in range(c, len(matrix[0])):
                 if matrix[i][j] == 1:
                     curVertSize += 1
+                else:
+                    break
             if minVertSize == -1:
                 minVertSize = curVertSize
             elif curVertSize < minVertSize:
                 minVertSize = curVertSize
+        else:
+            break
     return size * minVertSize
 
-
+arr = []
 for i in range(len(matrix)):
     for j in range(len(matrix[0])):
         s = checkRectangleSize(matrix, i, j)
-        print(s)
+        arr.append(s)
+print(max(arr))
