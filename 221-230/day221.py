@@ -1,17 +1,17 @@
-def calcSums(powers, curSum, possSums):
-    if len(curSum) == len(powers):
-        return [curSum]
-    for i in range(-1, len(powers)):
-        c = curSum.copy()
-        if i == -1:
-            c.append(0)
-            for i in calcSums(powers, c, possSums):
-                possSums.append(i)
-        elif not powers[i] in curSum:
-            c.append(powers[i])
-            for i in calcSums(powers, c, possSums):
-                possSums.append(i)
-    return possSums
+# https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions/blob/master/Solutions/221.py
 
-powers = [1, 7, 49]
-print(calcSums(powers, [], []))
+def get_nth_sevenish_num(number: int) -> int:
+    curr = 1
+    curr_iteration = 1
+    while curr < number:
+        curr_iteration += 1
+        curr += curr_iteration
+
+    curr -= curr_iteration
+    result = 7 ** (curr_iteration - 1)
+    curr_to_add = 1
+    for _ in range(number - curr - 1):
+        result += curr_to_add
+        curr_to_add *= 7
+    return result
+print(get_nth_sevenish_num(5))
